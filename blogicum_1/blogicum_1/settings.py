@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-iir_j#zhx^@_v)w+b6&e0gyccsb!0vcym+t(-ggw_r_n@tg52k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
 
 
 # Application definition
@@ -53,6 +53,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'blogicum.urls'
 
+TEMPLATES_DIR = BASE_DIR / 'templates'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -67,11 +69,6 @@ TEMPLATES = [
             ],
         },
     },
-]
-
-# Дополнительные директории, где собраны статические файлы проекта.
-STATICFILES_DIRS = [
-    BASE_DIR / 'static_dev',
 ]
 
 WSGI_APPLICATION = 'blogicum.wsgi.application'
@@ -128,5 +125,10 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+# Дополнительные директории, где собраны статические файлы проекта.
+STATICFILES_DIRS = [
+    BASE_DIR / 'static_dev',
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
