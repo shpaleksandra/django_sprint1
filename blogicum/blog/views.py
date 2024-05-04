@@ -49,11 +49,8 @@ def index(request):
     return render(request, template_name, context)
 
 def post_detail(request, id):
-    try:
-        context = {'post': posts[id]}
-    except IndexError:
-        return redirect('blog:index')
-    template_name = 'blog/detail.html'    
+    template_name = 'blog/detail.html'
+    context = {'post': posts[id]}    
     return render(request, template_name, context) 
 
 def category_posts(request, category_slug):
