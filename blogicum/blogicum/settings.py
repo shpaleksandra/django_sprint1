@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-iir_j#zhx^@_v)w+b6&e0gyccsb!0vcym+t(-ggw_r_n@tg52k'
+SECRET_KEY = 'django-insecure-&(d1figx!e^fw-dq29*w4mvgiah1_$&s9jo$=t00g55^8^2g(p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles'
+    'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -127,8 +127,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 # Дополнительные директории, где собраны статические файлы проекта.
-STATICFILES_DIRS = [
-    BASE_DIR / 'static_dev',
-]
+STATICFILES_DIRS = [BASE_DIR / 'static_dev']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
